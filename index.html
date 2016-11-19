@@ -659,6 +659,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style type="text/css"></style>
 <script type='text/javascript' src='http://thammythucuc.vn/wp-content/themes/thucuc/js/catchbox-menu.min.js?ver=1.1.0'></script>
 
+<script src="//cdn.accesstrade.vn/js/tracking.js" ></script>
+<script type="text/javascript">
+	AT.track();
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length,c.length);
+			}
+		}
+		return "";
+	}
+</script>
+
 <script type="text/javascript">
  function formSubmitClick() {
 	 var d = new Date();
@@ -667,8 +686,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	 params = params + '&email=' + timestamp + '_' + document.getElementById("form_email").value;
 	 params = params + '&phone=' + document.getElementById("custom_sodienthoai").value;
 	 params = params + '&dichvu=' + document.getElementById("custom_dich_vu").value;
+	 params = params + '&aff_source='+getCookie("_aff_network");
+	 params = params + '&aff_sid=' + getCookie("_aff_sid");
+	 params = params + '&identifier=' + timestamp + '_' + document.getElementById("form_email").value;
+
+
     document.getElementsByName("thankyou_url")[0].value = "http://nangmuidep.org/thank-you.html?form=" + encodeURIComponent(params);
-//	document.getElementsByName("thankyou_url")[0].value = "http://localhost:8080/nangmuidep.org/thank-you.html?form=" + encodeURIComponent(params);
+	//document.getElementsByName("thankyou_url")[0].value = "http://localhost:8080/nangmuidep.org/thank-you.html?form=" + encodeURIComponent(params);
  }
 </script>
 
