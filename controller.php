@@ -18,6 +18,10 @@
                 'value' => $_GET['phone']
             ),
             array(
+                'property' => 'dichvu',
+                'value' => $_GET['dichvu']
+            ),
+            array(
                 'property' => 'hs_lead_status',
                 'value' => "NEW"
             )
@@ -26,7 +30,7 @@
 
     $post_json = json_encode($arr);
 
-    $endpoint = "https://api.hubapi.com/contacts/v1/contact/?hapikey=2587de97-f911-488b-9da2-af6696464b99";
+    $endpoint = "https://api.hubapi.com/contacts/v1/contact/?hapikey=707c5382-1bd3-4947-84fc-021c860a83f5";
     $ch = @curl_init();
     @curl_setopt($ch, CURLOPT_POST, true);
     @curl_setopt($ch, CURLOPT_POSTFIELDS, $post_json);
