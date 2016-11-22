@@ -6,6 +6,10 @@
                 'value' => $_GET['email']
             ),
             array(
+                'property' => 'tc_email',
+                'value' => $_GET['email']
+            ),
+            array(
                 'property' => 'firstname',
                 'value' => $_GET['name']
             ),
