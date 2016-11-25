@@ -680,19 +680,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script type="text/javascript">
  function formSubmitClick() {
-	 var d = new Date();
-	 var timestamp = d.getTime();
 	 var params = 'name=' + document.getElementById("form_name").value;
 	 params = params + '&email=' + document.getElementById("form_email").value;
 	 params = params + '&phone=' + document.getElementById("custom_sodienthoai").value;
 	 params = params + '&dichvu=' + document.getElementById("custom_dich_vu").value;
 	 params = params + '&aff_source='+getCookie("_aff_network");
 	 params = params + '&aff_sid=' + getCookie("_aff_sid");
-	 params = params + '&identifier=' + timestamp + '_' + document.getElementById("form_email").value;
 
-
-	 //document.getElementsByName("thankyou_url")[0].value = "http://nangmuidep.org/thank-you.html?form=" + encodeURIComponent(params);
-	document.getElementsByName("thankyou_url")[0].value = "http://localhost:8080/nangmuidep.org/thank-you.html?form=" + encodeURIComponent(params);
+	 document.getElementsByName("thankyou_url")[0].value = "http://nangmuidep.org/thank-you.html?form=" + encodeURIComponent(params);
+	 //document.getElementsByName("thankyou_url")[0].value = "http://localhost:8080/nangmuidep.org/thank-you.html?form=" + encodeURIComponent(params);
  }
 </script>
 
